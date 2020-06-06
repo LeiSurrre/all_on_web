@@ -1,0 +1,50 @@
+.flexbox-container {
+  display: flex;
+  /* main axis*/
+  justify-content: flex-start; /* flex-end, center, space-between, space-around, space-evenly*/
+  /* cross axis*/
+  align-items: flex-start; /* stretch, center*/
+  /* multiline flexbox items*/
+  flex-wrap: wrap;
+  align-content: flex-start; /*flex-end*/
+}
+
+.flexbox-container-column {
+  display: flex;
+  flex-direction: column;
+  /* main axis*/
+  justify-content: flex-start; /* flex-end, center, space-between, space-around, space-evenly*/
+  /* cross axis*/
+  align-items: flex-start; /* stretch, center*/
+  /* multiline flexbox items*/
+  flex-wrap: wrap;
+  align-content: flex-start; /*flex-end*/
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+  /*flex: 1 0 0px; /* grow shrink basis*/
+  min-height: 100px;
+  flex-shrink: 0;
+  align-self: flex-end; /*aligh item itself in flexbox container*/
+  /*order: 3;  /*order the items*/
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+  flex-grow: 2;
+  flex-basis: 0; /* basis the width to 0 while taking up the spaces*/
+  align-self: center;
+}
+
+.flexbox-item-3 {
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
