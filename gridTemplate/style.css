@@ -1,0 +1,43 @@
+/*html, body {
+    height: 100%;
+}*/
+
+.grid-container {
+    display: grid;
+    /* each value represents 1 column */
+    /* values can be: auto, 100px, 10%, 1fr (flex fractional unit), max-content*/
+    grid-template-columns: 1fr 150px minmax(100px, 20%) auto;
+    /* use repeat to create grid
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100, 1fr));
+    */
+    /* each value represents 1 row */
+    grid-template-rows: auto 1fr auto;
+    /* grid-template to combine the two, row template/column template
+    grid-template: auto 1fr auto / 1fr 150px minmax(100px, 20%) auto;
+    */
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    height: 90vh;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.item1 {
+    /* start position 1 span 2 spaces */
+    grid-column: 1 / span 2;
+    /* start position 1 span to position 4
+    grid-column: 1 / 4;
+    */
+    /* keep the element's ratio
+    aspect-ratio: 16 / 9; /* might not be working? */
+    padding-top: 56.25%; /* 9/16 = 56.25 */
+    */
+}
